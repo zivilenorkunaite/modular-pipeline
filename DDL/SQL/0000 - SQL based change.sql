@@ -1,0 +1,1 @@
+create table if not exists default.changes_table (id int, value string)
