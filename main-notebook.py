@@ -16,3 +16,24 @@ print(e.introduce_exports("Zivile"))
 
 aud.log_process("n/a","import_some_data")
 print(i.import_some_data())
+
+# COMMAND ----------
+
+variable = dbutils.secrets.get("zivile-scope","slack-url")
+print(variable)
+
+# COMMAND ----------
+
+import helpers.secrets as ssshh
+
+# COMMAND ----------
+
+print(ssshh.get_my_secrets('slack-url'))
+
+# COMMAND ----------
+
+print(ssshh.get_my_secrets2(spark,'slack-url'))
+
+# COMMAND ----------
+
+print(ssshh.get_my_secrets3(dbutils,'slack-url'))
